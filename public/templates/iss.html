@@ -1,0 +1,26 @@
+<ng-include src="'templates/navbar.html'"></ng-include>
+<div class="container">
+	<ng-include src="'templates/alerts.html'"></ng-include>
+	<h1>International Space Station</h1>
+	<div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{googleMapsUrl}}">
+		<ng-map center="{{ISSLocation.iss_position.latitude}},{{ISSLocation.iss_position.longitude}}" zoom="3">
+			<marker position="{{ISSLocation.iss_position.latitude}},{{ISSLocation.iss_position.longitude}}" title="Space Station Location "></marker>
+		</ng-map>
+	</div>
+	<table class="table table-striped table-hover text-center">
+    <thead>
+      <tr>
+        <th class="text-center">Latitude</th>
+        <th class="text-center">Longitude</th>
+        <th class="text-center">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ISSLocation.iss_position.latitude}}</td>
+        <td>{{ISSLocation.iss_position.longitude}}</td>
+        <td>{{ISSLocation.dateTime}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

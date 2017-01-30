@@ -1,0 +1,25 @@
+<ng-include src="'templates/navbar.html'"></ng-include>
+<div class="container">
+  <h1>Location details: {{ location.location }}</h1>
+  <ng-include src="'templates/alerts.html'"></ng-include>
+  <form ng-submit="updateLocation(location)" class="form-inline">
+  
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input type="text" ng-model="location.location" class="form-control" id="location" name="location" placeholder="Location name" required aria-required=”true”>
+    </div>
+
+    <div class="form-group">
+      <label for="latitude">Latitude</label>
+      <input type="text" ng-model="location.latitude" class="form-control" id="latitude" name="latitude" placeholder="Lat" required aria-required=”true”>
+    </div>
+
+    <div class="form-group">
+      <label for="longitude">Longitude</label>
+      <input type="text" ng-model="location.longitude" class="form-control" id="longitude" name="longitude" placeholder="Lng" required aria-required=”true”>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a href="#/locations/{{ location._id }}/weather" class="btn btn-default">Weather report</a>
+  </form>
+</div>

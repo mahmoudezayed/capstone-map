@@ -1,0 +1,30 @@
+<ng-include src="'templates/navbar.html'"></ng-include>
+<div class="container">
+  <h1>Capstone Map App</h1>
+  <ng-include src="'templates/alerts.html'"></ng-include>
+  <div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{googleMapsUrl}}">
+    <ng-map zoom="2">
+      <marker ng-repeat="location in locations" position="{{location.latitude}},{{location.longitude}}" title="{{location.location}}"></marker>
+    </ng-map>
+  </div>
+  <h2>Locations</h2>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Location</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Report</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="location in locations">
+        <td><a href="#/locations/{{location._id}}">{{location.location}}</a></td>
+        <td>{{location.latitude}}</td>
+        <td>{{location.longitude}}</td>
+        <td><a href="#/locations/{{location._id}}/weather" class="btn btn-default">Weather report</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

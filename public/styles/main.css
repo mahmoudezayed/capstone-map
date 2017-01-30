@@ -1,0 +1,17 @@
+#map {
+    height: 400px;
+    width: 100%;
+}
+.navbar-default {
+    background-color: rgb(163, 204, 255);
+    border-color: #77b4e4;
+}
+.navbar-default .navbar-brand {
+    color: #8f4641;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background-color: #c1dfba;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #578bcf;
+}

@@ -1,0 +1,6 @@
+<div class="alert alert-{{ flashType }}" role="alert" ng-show="flashType">{{flashMsg}}</div>
+<div class="alert alert-danger" role="alert" ng-show="allErrors.length > 0">
+	<ul>
+		<li ng-repeat="error in allErrors">{{error}}</li>
+	</ul>
+</div>

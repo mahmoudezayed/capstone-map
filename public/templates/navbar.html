@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/#/">
+        Capstone
+      </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ng-class="routeAction == '/' ? 'active': ''"><a href="/#/">Home</a></li>
+      <li ng-class="routeAction == '/iss' ? 'active': ''"><a href="#/iss">ISS Location</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li ng-class="routeAction == '/create' ? 'active': ''"><a href="#/create">Create new location</a></li>
+    </ul>
+  </div>
+</nav>

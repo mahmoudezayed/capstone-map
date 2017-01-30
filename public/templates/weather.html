@@ -1,0 +1,17 @@
+<ng-include src="'templates/navbar.html'"></ng-include>
+<div class="container">
+  <h1>Weather details: {{ location.location }}</h1>
+  <ng-include src="'templates/alerts.html'"></ng-include>
+
+  	<div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{googleMapsUrl}}">
+		<ng-map center="{{location.latitude}},{{location.longitude}}" zoom="6">
+			<marker position="{{location.latitude}},{{location.longitude}}" title="{{location.location}}"></marker>
+		</ng-map>
+	</div>
+	
+  	<div class="panel panel-default">
+    	<div class="panel-body">
+     		<b>{{ location.location }} weather:</b> {{ weather }}
+    	</div>
+  	</div>
+</div>

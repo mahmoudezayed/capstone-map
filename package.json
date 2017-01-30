@@ -4,8 +4,21 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./src/app.js localhost 3000",
+    "hint": "jshint src/ public/scripts/"
+  },
+  "engines": {
+    "node": "6.9.4"
   },
   "author": "Mahmoud Eid",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.9.1",
+    "jshint": "^2.9.4"
+  },
+  "dependencies": {
+    "body-parser": "1.16.0",
+    "express": "4.14.0",
+    "mongoose": "4.7.9"
+  }
 }
