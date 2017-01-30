@@ -3,7 +3,7 @@
 
 	var mongoose = require('mongoose');
 
-	mongoose.connect('mongodb://localhost/capstone', function (err) {
+	mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/capstone', function (err) {
 		if(err){
 			console.log('Failed connecting to MongoDB!');
 		}else{

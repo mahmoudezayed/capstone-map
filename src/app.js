@@ -20,7 +20,9 @@
 	// Use routes
 	app.use('/api', routes);
 
-	app.listen('3000', function () {
-		console.log('The server in running on port 3000!');
+	var port = process.env.PORT || 3000;
+
+	app.listen(port, hostname, function () {
+		console.log('The server is running at http://oursite:' + port + '/');
 	});
 })();
