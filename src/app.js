@@ -22,7 +22,7 @@
 
 	var port = process.env.PORT || 3000;
 
-	app.listen(port, hostname, function () {
+	app.listen(port, function () {
 		console.log('The server is running at http://oursite:' + port + '/');
 	});
 })();
